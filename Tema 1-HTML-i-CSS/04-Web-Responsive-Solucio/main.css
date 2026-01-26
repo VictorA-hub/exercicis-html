@@ -1,0 +1,591 @@
+/* ============================================
+RESET I BASE
+============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1a202c;
+  line-height: 1.6;
+  background-color: #f7fafc;
+}
+
+/* ============================================
+UTILITATS - CONTENIDORS
+============================================ */
+
+/* Row per sistema de columnes amb flex */
+/* Contenidor flexible que permet el salt de línia dels elements */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Els elements no creixen (grow=0), no es redueixen (shrink=0) i l'amplada és el width que tinguin */
+[class^='col-'] {
+  flex: 0 0 auto;
+}
+
+/* Mobile First (Tots els dispositius, principalment smartphones, amb l'amplada menor de 576px)  */
+.col-1 {
+  width: 8.333333%;
+}
+.col-2 {
+  width: 16.666667%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.333333%;
+}
+.col-5 {
+  width: 41.666667%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.333333%;
+}
+.col-8 {
+  width: 66.666667%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.333333%;
+}
+.col-11 {
+  width: 91.666667%;
+}
+.col-12 {
+  width: 100%;
+}
+
+/* Small ≥576px (Dispositius petits, poden ser smartphones grans o tauletes en portrait majors de 576px i menors de 768px) */
+@media (min-width: 576px) {
+  .col-sm-1 {
+    width: 8.333333%;
+  }
+  .col-sm-2 {
+    width: 16.666667%;
+  }
+  .col-sm-3 {
+    width: 25%;
+  }
+  .col-sm-4 {
+    width: 33.333333%;
+  }
+  .col-sm-5 {
+    width: 41.666667%;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-7 {
+    width: 58.333333%;
+  }
+  .col-sm-8 {
+    width: 66.666667%;
+  }
+  .col-sm-9 {
+    width: 75%;
+  }
+  .col-sm-10 {
+    width: 83.333333%;
+  }
+  .col-sm-11 {
+    width: 91.666667%;
+  }
+  .col-sm-12 {
+    width: 100%;
+  }
+}
+
+/* Medium ≥768px (Dispositius mitjans, poden ser tablets en landscape o netbooks majors de 768px i menors de 992px) */
+@media (min-width: 768px) {
+  .col-md-1 {
+    width: 8.333333%;
+  }
+  .col-md-2 {
+    width: 16.666667%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.333333%;
+  }
+  .col-md-5 {
+    width: 41.666667%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-7 {
+    width: 58.333333%;
+  }
+  .col-md-8 {
+    width: 66.666667%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-10 {
+    width: 83.333333%;
+  }
+  .col-md-11 {
+    width: 91.666667%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+}
+
+/* Large ≥992px (Dispositius grans, ordinadors portàtils o de sobretaula amb pantalles més grans de 992px i menors a 1200px) */
+@media (min-width: 992px) {
+  .col-lg-1 {
+    width: 8.333333%;
+  }
+  .col-lg-2 {
+    width: 16.666667%;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  .col-lg-4 {
+    width: 33.333333%;
+  }
+  .col-lg-5 {
+    width: 41.666667%;
+  }
+  .col-lg-6 {
+    width: 50%;
+  }
+  .col-lg-7 {
+    width: 58.333333%;
+  }
+  .col-lg-8 {
+    width: 66.666667%;
+  }
+  .col-lg-9 {
+    width: 75%;
+  }
+  .col-lg-10 {
+    width: 83.333333%;
+  }
+  .col-lg-11 {
+    width: 91.666667%;
+  }
+  .col-lg-12 {
+    width: 100%;
+  }
+}
+
+/* Extra Large ≥1200px (Dispositius molt grans, ordinadors portàtils i de sobretaula amb pantalles més grans de 1200) */
+@media (min-width: 1200px) {
+  .col-xl-1 {
+    width: 8.333333%;
+  }
+  .col-xl-2 {
+    width: 16.666667%;
+  }
+  .col-xl-3 {
+    width: 25%;
+  }
+  .col-xl-4 {
+    width: 33.333333%;
+  }
+  .col-xl-5 {
+    width: 41.666667%;
+  }
+  .col-xl-6 {
+    width: 50%;
+  }
+  .col-xl-7 {
+    width: 58.333333%;
+  }
+  .col-xl-8 {
+    width: 66.666667%;
+  }
+  .col-xl-9 {
+    width: 75%;
+  }
+  .col-xl-10 {
+    width: 83.333333%;
+  }
+  .col-xl-11 {
+    width: 91.666667%;
+  }
+  .col-xl-12 {
+    width: 100%;
+  }
+}
+
+/* ============================================
+MENÚ NAVIGATION STICKY
+============================================ */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  backdrop-filter: blur(6px);
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  vertical-align: top;
+  padding: 1rem;
+}
+
+.logo img {
+  vertical-align: bottom;
+  width: 3rem;
+  filter: invert(100%);
+  box-shadow: inset 0 0 0 2rem rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+
+/* Menu items */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.nav-menu li {
+  transition: all 0.5s ease;
+}
+
+.nav-menu li:hover {
+  transform: translateY(-0.2rem);
+}
+
+.nav-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.6rem;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+  transition: all 0.5s ease;
+  outline: solid 1px rgba(255, 255, 255, 0.2);
+  border-radius: 0.25rem;
+}
+
+.nav-menu a:hover {
+  outline: solid 1px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.6);
+}
+
+/* ============================================
+HERO SECTION AMB PARALLAX
+============================================ */
+
+.hero {
+  height: 100vh;
+  background-image: url('./img/hero-section.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Overlay fosc */
+/*
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+}
+*/
+
+.hero-content {
+  z-index: 2;
+  text-align: center;
+  padding-top: 25vh;
+  animation: fadeInDown 1.5s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-120px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1 {
+  font-size: 4rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  letter-spacing: -1px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 2.5rem auto;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Botó glass amb efecte */
+.btn-glass {
+  display: inline-block;
+  padding: 1.5rem 2.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 2rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.25rem;
+  transition: all 0.6s ease;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.btn-glass:hover {
+  background-color: #1abc9c;
+  border: 2px solid #16a085;
+  border-radius: 1rem;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+SECCIÓ DESTINACIONS POPULARS
+============================================ */
+.destinations {
+  padding-top: 2rem;
+  background-color: #ffffff;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-title h2 {
+  font-size: 3rem;
+  color: #1a202c;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.section-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+  color: #4a5568;
+  line-height: 1.8;
+}
+
+/* Cards de viatges */
+.card-container {
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+section > div > div {
+  padding: 1rem;
+}
+
+.travel-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  margin-bottom: 2rem;
+}
+
+.travel-card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.3);
+}
+
+.travel-card img {
+  border-radius: 1rem 1rem 0 0;
+  width: 100%;
+  max-height: 250px;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  color: #1a202c;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.card-content p {
+  color: #4a5568;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.card-price {
+  font-size: 1.75rem;
+  color: #1abc9c;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.btn-card {
+  padding: 0.75rem 1.5rem;
+  background-color: #3498db;
+  border: solid 1px #2980b9;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 1s ease;
+}
+
+.btn-card:hover {
+  background: #1a202c;
+}
+
+/* ============================================
+OFERTES DESTACADES (4 CARDS)
+============================================ */
+.featured-offers {
+  padding: 2rem 0;
+  background-color: #f7fafc;
+}
+
+.featured-offers .card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.featured-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease;
+}
+
+.featured-card:hover {
+  border-color: rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
+
+.featured-badge {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: #ffffff;
+  padding: 0.75rem;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.featured-card img {
+  width: 100%;
+}
+
+.featured-content {
+  padding: 1.5rem;
+}
+
+.featured-content h3 {
+  font-size: 1.3rem;
+  color: #1a202c;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.featured-content p {
+  color: #4a5568;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.featured-price {
+  font-size: 1.1rem;
+  color: #e74c3c;
+  font-weight: 700;
+  text-decoration: line-through;
+  margin-bottom: 0.25rem;
+}
+
+.featured-price-new {
+  font-size: 2rem;
+  color: #1abc9c;
+  font-weight: 700;
+}
+
+/* ============================================
+  FOOTER
+============================================ */
+footer {
+  background: linear-gradient(135deg, #1a202c, #2d3748);
+  color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #1abc9c;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+}
