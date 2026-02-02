@@ -24,7 +24,7 @@ divPersonatge.style.setProperty('border', 'solid 5px goldenrod');
 
 // PUNT 2: Canviar el color de fons a daurat "gold"
 
-nomPersonatge.style.setProperty('background-color', 'gold');
+divPersonatge.style.setProperty('background-color', 'gold');
 
 // PUNT 3: Fer el personatge més gran "scale(1.2)"
 
