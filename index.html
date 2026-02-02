@@ -1,11 +1,241 @@
+Aquí tienes el código actualizado. He traducido todos los textos visibles (títulos, descripciones,
+etiquetas y secciones) al **catalán**, manteniendo la estructura de tus carpetas intacta para que
+los enlaces sigan funcionando.
+
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Índex Principal</title>
+    <title>El meu Portfolio d'Exercicis - M0373</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --card-bg: #1e293b;
+        --text: #f1f5f9;
+        --accent: #38bdf8;
+        --accent-js: #f7df1e;
+        --border: #334155;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .container {
+        padding: 40px 20px;
+        flex: 1;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      h2 {
+        grid-column: 1 / -1;
+        border-bottom: 2px solid var(--border);
+        padding-bottom: 10px;
+        margin-top: 40px;
+        color: var(--accent);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 25px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .exercise-card {
+        background: var(--card-bg);
+        border: 1.5px solid var(--border);
+        border-radius: 15px;
+        padding: 20px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .exercise-card:hover {
+        border-color: var(--accent);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .exercise-card h3 {
+        margin: 10px 0;
+        font-size: 1.1rem;
+      }
+
+      .lang-badge {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        padding: 4px 10px;
+        border-radius: 20px;
+        border: 1px solid var(--accent);
+        width: fit-content;
+        font-weight: bold;
+      }
+
+      .badge-js {
+        border-color: var(--accent-js);
+        color: var(--accent-js);
+      }
+
+      .description {
+        font-size: 0.85rem;
+        color: #94a3b8;
+        line-height: 1.5;
+      }
+
+      footer {
+        background-color: var(--card-bg);
+        border-top: 1px solid var(--border);
+        text-align: center;
+        padding: 20px;
+        margin-top: 60px;
+        font-size: 0.9rem;
+        color: #94a3b8;
+      }
+
+      footer p {
+        margin: 5px 0;
+      }
+
+      footer a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+    </style>
   </head>
   <body>
 
+    <div class="container">
+      <div class="header">
+        <h1>0373 - Llenguatges de marques i SGE</h1>
+        <p>Solucions dels exercicis de classe realitzats durant el curs</p>
+      </div>
+
+      <div class="grid">
+
+        <h2>Tema 1: HTML i CSS</h2>
+
+        <a href="Tema 1-HTML-i-CSS/01-Selectors-Basics/index.html" class="exercise-card">
+          <span class="lang-badge">HTML/CSS</span>
+          <h3>01 - Selectors Bàsics</h3>
+          <p class="description">Introducció als selectors fonamentals de CSS per aplicar estils.
+          </p>
+        </a>
+
+        <a href="Tema 1-HTML-i-CSS/02-Model-De-Caixa/index.html" class="exercise-card">
+          <span class="lang-badge">HTML/CSS</span>
+          <h3>02 - Model de Caixa</h3>
+          <p class="description">Pràctiques sobre margin, border, padding i contingut (Box Model).
+          </p>
+        </a>
+
+        <a href="Tema 1-HTML-i-CSS/03-Propietats-CSS-Portfolio/index.html" class="exercise-card">
+          <span class="lang-badge">HTML/CSS</span>
+          <h3>03 - Propietats CSS Portfolio</h3>
+          <p class="description">Maquetació d'un portfolio personal amb imatges de projectes.</p>
+        </a>
+
+        <a href="Tema 1-HTML-i-CSS/04-Web-Responsive-Solucio/index.html" class="exercise-card">
+          <span class="lang-badge">HTML/CSS</span>
+          <h3>04 - Web Responsive (Hero Section)</h3>
+          <p class="description">Disseny adaptatiu amb diferents versions per a mòbil i escriptori.
+          </p>
+        </a>
+
+        <a href="Tema 1-HTML-i-CSS/0X-Model-Examen-HTML-CSS/index.html" class="exercise-card">
+          <span class="lang-badge">HTML/CSS</span>
+          <h3>Examen: Model HTML/CSS</h3>
+          <p class="description">Resolució del model d'examen de maquetació avançada.</p>
+        </a>
+
+        <h2>Tema 2: JavaScript i JSON</h2>
+
+        <a href="Tema2-JavaScript-i-JSON/01-exercicis-gestio-dom/exercici1/index.html"
+          class="exercise-card">
+          <span class="lang-badge badge-js">JS / DOM</span>
+          <h3>Exercici 1: Gestió del DOM</h3>
+          <p class="description">Primer contacte amb la manipulació dinàmica d'elements HTML.</p>
+        </a>
+
+        <a href="Tema2-JavaScript-i-JSON/01-exercicis-gestio-dom/exercici2/index.html"
+          class="exercise-card">
+          <span class="lang-badge badge-js">JS / DOM</span>
+          <h3>Exercici 2: Pokémon</h3>
+          <p class="description">Intercanvi d'imatges (Pikachu/Raichu) mitjançant esdeveniments.</p>
+        </a>
+
+        <a href="Tema2-JavaScript-i-JSON/01-exercicis-gestio-dom/exercici3/index.html"
+          class="exercise-card">
+          <span class="lang-badge badge-js">JS / DOM</span>
+          <h3>Exercici 3: Ranking de Jugadors</h3>
+          <p class="description">Modificació d'elements de la pàgina segons l'entrada de l'usuari.
+          </p>
+        </a>
+
+        <a href="Tema2-JavaScript-i-JSON/01-exercicis-gestio-dom/exercici4/index.html"
+          class="exercise-card">
+          <span class="lang-badge badge-js">JS / DOM</span>
+          <h3>Exercici 4: Hollow Knight</h3>
+          <p class="description">Pràctica d'esdeveniments amb la imatge de personatges (Hornet).</p>
+        </a>
+
+        <a href="Tema2-JavaScript-i-JSON/01-exercicis-gestio-dom/exercici5/index.html"
+          class="exercise-card">
+          <span class="lang-badge badge-js">JS / DOM</span>
+          <h3>Exercici 5: Barra de Vida (Luffy)</h3>
+          <p class="description">Canvi dinàmic d'imatges segons l'estat de "vida" del personatge.
+          </p>
+        </a>
+
+        <a href="Tema2-JavaScript-i-JSON/01-exercicis-gestio-dom/exercici6/index.html"
+          class="exercise-card">
+          <span class="lang-badge badge-js">JS / DOM</span>
+          <h3>Exercici 6: Personatges Videojocs</h3>
+          <p class="description">Selecció dinàmica de personatges clàssics (Mario, Link, Sonic).</p>
+        </a>
+
+        <a href="Tema2-JavaScript-i-JSON/01-exercicis-gestio-dom/exercici7/index.html"
+          class="exercise-card">
+          <span class="lang-badge badge-js">JS / DOM</span>
+          <h3>Exercici 7: Clash Royale Galeria</h3>
+          <p class="description">Generació de graella de personatges i canvi d'extensions d'imatge.
+          </p>
+        </a>
+
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 - Portfoli de l'Alumne Victor Alvarez Calvo</p>
+      <p>Institut Carles Vallbona| <a
+          href="https://github.com/VictorA-hub/exercicis-html">GitHub</a> | <a
+          href="mailto:victor_alvarezcalvo@iescarlesvallbona.cat">Contactar</a></p>
+    </footer>
+
   </body>
 </html>
+
+```
