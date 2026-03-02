@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El meu Portfoli d'Exercicis - M0373</title>
+
     <style>
       :root {
         --bg: #0f172a;
@@ -36,11 +37,21 @@
       }
 
       h2 {
-        grid-column: 1 / -1;
+        max-width: 1200px;
+        margin: 50px auto 20px auto;
         border-bottom: 2px solid var(--border);
         padding-bottom: 10px;
-        margin-top: 40px;
         color: var(--accent);
+      }
+
+      .apartat {
+        max-width: 1200px;
+        margin: 50px auto 15px auto;
+        /* FIX: augmentat de 30px a 50px */
+        font-size: 1.2rem;
+        color: var(--accent-js);
+        border-left: 4px solid var(--accent-js);
+        padding-left: 10px;
       }
 
       .grid {
@@ -121,6 +132,7 @@
 
     </style>
   </head>
+
   <body>
 
     <div class="container">
@@ -129,9 +141,13 @@
         <p>Solucions dels exercicis de classe realitzats durant el curs</p>
       </div>
 
-      <div class="grid">
+      <!-- ======================= -->
+      <!-- TEMA 1 -->
+      <!-- ======================= -->
 
-        <h2>Tema 1: HTML i CSS</h2>
+      <h2>Tema 1: HTML i CSS</h2>
+
+      <div class="grid">
 
         <a href="Tema 1-HTML-i-CSS/01-Selectors-Basics/index.html" class="exercise-card">
           <span class="lang-badge">HTML</span>
@@ -166,8 +182,17 @@
           <p class="description">Resolució del model d'examen de maquetació avançada.</p>
         </a>
 
-        <h2>Tema 2: JavaScript i JSON</h2>
+      </div>
 
+      <!-- ======================= -->
+      <!-- TEMA 2 -->
+      <!-- ======================= -->
+
+      <h2>Tema 2: JavaScript i JSON</h2>
+
+      <h3 class="apartat">2.1 - Exercicis Gestió del DOM</h3>
+
+      <div class="grid">
         <a href="Tema2-JavaScript-i-JSON/01-exercicis-gestio-dom/exercici1/index.html"
           class="exercise-card">
           <span class="lang-badge badge-js">JS / DOM</span>
@@ -178,7 +203,7 @@
         <a href="Tema2-JavaScript-i-JSON/01-exercicis-gestio-dom/exercici2/index.html"
           class="exercise-card">
           <span class="lang-badge badge-js">JS / DOM</span>
-          <h3>Exercici 2: Pokémon</h3>
+          <h3>Exercici 2: Pokedex Interactiva</h3>
           <p class="description">Intercanvi d'imatges (Pikachu/Raichu) mitjançant esdeveniments.</p>
         </a>
 
@@ -215,19 +240,47 @@
         <a href="Tema2-JavaScript-i-JSON/01-exercicis-gestio-dom/exercici7/index.html"
           class="exercise-card">
           <span class="lang-badge badge-js">JS / DOM</span>
-          <h3>Exercici 7: Clash Royale Galeria</h3>
+          <h3>Exercici 7: Clash Of Clans Galeria</h3>
           <p class="description">Generació de graella de personatges i canvi d'extensions d'imatge.
           </p>
         </a>
-
       </div>
+
+      <h3 class="apartat">2.2 - Exercicis Programació del DOM</h3>
+
+      <!-- FIX: els dos exercicis ara estan dins del MATEIX div.grid -->
+      <div class="grid">
+        <a href="Tema2-JavaScript-i-JSON/02-programació-dom/exercici1/index.html"
+          class="exercise-card">
+          <span class="lang-badge badge-js">JS / PROGRAMACIÓ DOM</span>
+          <h3>Exercici 1: Botiga Pokémon</h3>
+          <p class="description">Primer contacte amb la manipulació dinàmica d'elements HTML.</p>
+        </a>
+
+        <a href="Tema2-JavaScript-i-JSON/02-programació-dom/exercici2/index.html"
+          class="exercise-card">
+          <span class="lang-badge badge-js">JS / PROGRAMACIÓ DOM</span>
+          <h3>Exercici 2: Calculadora Combat Pokémon</h3>
+          <p class="description">AAAA</p>
+        </a>
+
+        <a href="Tema2-JavaScript-i-JSON/02-programació-dom/exercici3/index.html"
+          class="exercise-card">
+          <span class="lang-badge badge-js">JS / PROGRAMACIÓ DOM</span>
+          <h3>Exercici 3: Màquina de Loots</h3>
+          <p class="description">AAA</p>
+        </a>
+      </div>
+
+
     </div>
 
     <footer>
       <p>&copy; 2026 - Portfoli de l'Alumne Victor Alvarez Calvo</p>
-      <p>Institut Carles Vallbona| <a
-          href="https://github.com/VictorA-hub/exercicis-html">GitHub</a> | <a
-          href="mailto:victor_alvarezcalvo@iescarlesvallbona.cat">Contactar</a></p>
+      <p>Institut Carles Vallbona |
+        <a href="https://github.com/VictorA-hub/exercicis-html">GitHub</a> |
+        <a href="mailto:victor_alvarezcalvo@iescarlesvallbona.cat">Contactar</a>
+      </p>
     </footer>
 
   </body>

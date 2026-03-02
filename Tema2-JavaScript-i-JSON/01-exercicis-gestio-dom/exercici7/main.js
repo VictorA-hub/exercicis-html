@@ -63,7 +63,6 @@ Barbar1Stats.textContent = '❤️ 78 ⚔️ 16';
 Barbar1Stats.style.fontWeight = 'bold';
 
 // PUNT 9: Afegir la imatge, el nom i les estadístiques al div del Bàrbar
-// L'ordre importa: primer la imatge, després el nom i després les stats
 Barbar1.append(Barbar1IMG, Barbar1Nom, Barbar1Stats);
 
 // PUNT 10: Afegir el Bàrbar a la zonaAliada

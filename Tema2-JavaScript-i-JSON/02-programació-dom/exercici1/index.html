@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici 1 - Botiga de Pokémon</title>
+    <link rel="stylesheet" href="./main.css">
+    <script type="module" src="./main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <h1><img src="./img/pokemon-shop.png" alt="pokemon shop"> BOTIGA DE POKÉMON</h1>
+        <p class="instruccions">Completa les tasques del fitxer <strong>main.js</strong> per
+          gestionar la botiga!</p>
+      </div>
+
+      <!-- Monedes del jugador -->
+      <div class="player-money">
+        <div class="money-icon"></div>
+        <div class="money-info">
+          <div class="money-label">Les teves monedes</div>
+          <div class="money-value" id="monedes-jugador">0</div>
+        </div>
+      </div>
+
+      <!-- Catàleg de productes -->
+      <div class="cataleg">
+        <h2>📋 Catàleg de Productes</h2>
+        <div class="productes-grid">
+          <!-- Poké Ball -->
+          <div class="producte">
+            <div class="producte-icon"><img src="./img/pokeball.png" alt="pokeball"></div>
+            <div class="producte-nom">Poké Ball</div>
+            <div class="producte-preu">200 ₽</div>
+          </div>
+
+          <!-- Super Ball -->
+          <div class="producte">
+            <div class="producte-icon"><img src="./img/superball.png" alt="superball"></div>
+            <div class="producte-nom">Super Ball</div>
+            <div class="producte-preu">600 ₽</div>
+          </div>
+
+          <!-- Ultra Ball -->
+          <div class="producte">
+            <div class="producte-icon"><img src="./img/ultraball.png" alt="ultraball"></div>
+            <div class="producte-nom">Ultra Ball</div>
+            <div class="producte-preu">1200 ₽</div>
+          </div>
+
+          <!-- Master Ball -->
+          <div class="producte">
+            <div class="producte-icon"><img src="./img/masterball.png" alt="masterball"></div>
+            <div class="producte-nom">Master Ball</div>
+            <div class="producte-preu">1000000 ₽</div>
+          </div>
+
+          <!-- Poció -->
+          <div class="producte">
+            <div class="producte-icon"><img src="./img/pocio.png" alt="pocio"></div>
+            <div class="producte-nom">Poció</div>
+            <div class="producte-preu">300 ₽</div>
+          </div>
+
+          <!-- Superpoció -->
+          <div class="producte">
+            <div class="producte-icon"><img src="./img/superpocio.png" alt="superpocio"></div>
+            <div class="producte-nom">Superpoció</div>
+            <div class="producte-preu">700 ₽</div>
+          </div>
+
+          <!-- Hiperpoció -->
+          <div class="producte">
+            <div class="producte-icon"><img src="./img/hiperpocio.png" alt="hiperpocio"></div>
+            <div class="producte-nom">Hiperpoció</div>
+            <div class="producte-preu">1200 ₽</div>
+          </div>
+
+          <!-- Reviu -->
+          <div class="producte">
+            <div class="producte-icon"><img src="./img/revivir.png" alt="revivir"></div>
+            <div class="producte-nom">Reviu</div>
+            <div class="producte-preu">2000 ₽</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inventari -->
+      <div class="inventari">
+        <h2>🎒 El Teu Inventari</h2>
+        <div class="inventari-grid" id="inventari">
+          <div class="inventari-buit">
+            <p>📭 L'inventari està buit</p>
+            <p>Completa les tasques per afegir objectes!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resum de compres -->
+      <div class="resum">
+        <h2>🧾 Resum de Compres</h2>
+        <div class="resum-content" id="resum-compres">
+          <p class="resum-buit">Encara no has comprat res...</p>
+        </div>
+      </div>
+
+      <!-- Checklist -->
+      <div class="checklist">
+        <h3>✅ Checklist de Tasques:</h3>
+        <ul>
+          <li>[X] Establir monedes inicials del jugador (15000₽)</li>
+          <li>[X] Actualitzar el número de monedes al DOM</li>
+          <li>[X] Comprar 3 Poké Balls (200₽ cadascuna)</li>
+          <li>[X] Calcular el cost total de les Poké Balls</li>
+          <li>[X] Restar el cost de les monedes del jugador</li>
+          <li>[X] Actualitzar les monedes al DOM</li>
+          <li>[X] Afegir les Poké Balls a l'inventari (DOM)</li>
+          <li>[X] Comprar 4 Superpocions (700₽ cadascuna)</li>
+          <li>[X] Actualitzar monedes i inventari</li>
+          <li>[X] Comprar 2 Ultra Balls (1200₽ cadascuna)</li>
+          <li>[X] Actualitzar les monedes i l'inventari</li>
+          <li>[X] Mostrar el resum de compres al DOM</li>
+          <li>[X] Intentar comprar 1 Master Ball (1000000₽)</li>
+          <li>[X] Comprovar si tens suficients monedes</li>
+          <li>[X] Afegeix la Master Ball a l'inventari si tens prou monedes</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici 2 - Calculadora de Combat</title>
+    <link rel="stylesheet" href="./main.css">
+    <script type="module" src="./main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <h1>⚔️ CALCULADORA DE COMBAT</h1>
+        <p class="instruccions">Completa les tasques del fitxer <strong>main.js</strong> per
+          calcular el combat!</p>
+      </div>
+
+      <!-- Arena de Combat -->
+      <div class="arena">
+        <!-- Jugador -->
+        <div class="combatent jugador">
+          <div class="combatent-header">
+            <h2>🛡️ MEWTWO</h2>
+            <div class="nivell">Niv. 50</div>
+          </div>
+          <div class="avatar">
+            <img src="./img/mewtwo.webp" alt="Mewtwo">
+          </div>
+          <div class="stats">
+            <div class="stat">
+              <span class="stat-label">⚔️ Atac</span>
+              <span class="stat-value" id="atac-jugador">0</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">🛡️ Defensa</span>
+              <span class="stat-value" id="defensa-jugador">0</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">⚡ Velocitat</span>
+              <span class="stat-value" id="velocitat-jugador">0</span>
+            </div>
+          </div>
+          <!-- Barra de Vida -->
+          <div class="vida-container">
+            <div class="vida-label">
+              <span>❤️ Vida</span>
+              <span id="vida-jugador-text">0/0</span>
+            </div>
+            <div class="barra-vida">
+              <div class="vida-actual jugador" id="barra-vida-jugador"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VS -->
+        <div class="vs-divider">
+          <div class="vs-text">VS</div>
+        </div>
+
+        <!-- Enemic -->
+        <div class="combatent enemic">
+          <div class="combatent-header">
+            <h2>👹 CHARIZARD</h2>
+            <div class="nivell">Niv. 50</div>
+          </div>
+          <div class="avatar">
+            <img src="./img/charizard.webp" alt="Charizard">
+          </div>
+          <div class="stats">
+            <div class="stat">
+              <span class="stat-label">⚔️ Atac</span>
+              <span class="stat-value" id="atac-enemic">0</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">🛡️ Defensa</span>
+              <span class="stat-value" id="defensa-enemic">0</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">⚡ Velocitat</span>
+              <span class="stat-value" id="velocitat-enemic">0</span>
+            </div>
+          </div>
+          <!-- Barra de Vida -->
+          <div class="vida-container">
+            <div class="vida-label">
+              <span>❤️ Vida</span>
+              <span id="vida-enemic-text">0/0</span>
+            </div>
+            <div class="barra-vida">
+              <div class="vida-actual enemic" id="barra-vida-enemic"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Càlculs de Combat -->
+      <div class="calculs">
+        <h2>📊 Càlculs de Combat</h2>
+        <div class="calculs-grid">
+          <!-- Dany del Jugador -->
+          <div class="calcul-card jugador-card">
+            <h3>⚔️ Atac del Jugador</h3>
+            <div class="calcul-resultat">
+              <div class="calcul-label">Dany Normal:</div>
+              <div class="calcul-valor" id="dany-jugador-normal">0</div>
+            </div>
+            <div class="calcul-resultat">
+              <div class="calcul-label">Dany Crític (x2):</div>
+              <div class="calcul-valor destacat" id="dany-jugador-critic">0</div>
+            </div>
+            <div class="calcul-resultat">
+              <div class="calcul-label">Prob. Crític:</div>
+              <div class="calcul-valor" id="prob-critic-jugador">0%</div>
+            </div>
+            <div class="calcul-resultat">
+              <div class="calcul-label">Prob. Esquiva:</div>
+              <div class="calcul-valor" id="prob-esquiva-jugador">0%</div>
+            </div>
+          </div>
+
+          <!-- Dany de l'Enemic -->
+          <div class="calcul-card enemic-card">
+            <h3>👹 Atac de l'Enemic</h3>
+            <div class="calcul-resultat">
+              <div class="calcul-label">Dany Normal:</div>
+              <div class="calcul-valor" id="dany-enemic-normal">0</div>
+            </div>
+            <div class="calcul-resultat">
+              <div class="calcul-label">Dany Crític (x2):</div>
+              <div class="calcul-valor destacat" id="dany-enemic-critic">0</div>
+            </div>
+            <div class="calcul-resultat">
+              <div class="calcul-label">Prob. Crític:</div>
+              <div class="calcul-valor" id="prob-critic-enemic">0%</div>
+            </div>
+            <div class="calcul-resultat">
+              <div class="calcul-label">Prob. Esquiva:</div>
+              <div class="calcul-valor" id="prob-esquiva-enemic">0%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prediccions -->
+      <div class="prediccions">
+        <h2>🎯 Prediccions de Combat</h2>
+        <div class="prediccions-grid">
+          <div class="prediccio">
+            <div class="prediccio-icon">🎯</div>
+            <div class="prediccio-label">Torns per guanyar Jugador</div>
+            <div class="prediccio-valor" id="torns-guanyar">0</div>
+          </div>
+          <div class="prediccio">
+            <div class="prediccio-icon">❤️</div>
+            <div class="prediccio-label">Vida restant Jugador</div>
+            <div class="prediccio-valor" id="vida-restant">0</div>
+          </div>
+          <div class="prediccio">
+            <div class="prediccio-icon">⚡</div>
+            <div class="prediccio-label">Qui ataca primer?</div>
+            <div class="prediccio-valor" id="qui-primer">---</div>
+          </div>
+          <div class="prediccio">
+            <div class="prediccio-icon">🏆</div>
+            <div class="prediccio-label">Probabilitat victòria Jugador</div>
+            <div class="prediccio-valor" id="prob-victoria">0%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Simulació de Combat -->
+      <div class="simulacio">
+        <h2>⚔️ Simulació del Combat</h2>
+        <div class="simulacio-log" id="log-combat">
+          <p class="log-buit">Completa les tasques per veure la simulació...</p>
+        </div>
+      </div>
+
+      <!-- Checklist -->
+      <div class="checklist">
+        <h3>✅ Checklist de Tasques:</h3>
+        <ul>
+          <li>[X] Establir stats del jugador (nom, atac, defensa, velocitat i vida)</li>
+          <li>[X] Establir stats de l'enemic (nom, atac, defensa, velocitat i vida)</li>
+          <li>[X] Establir el percentatge de les barres de vida</li>
+          <li>[X] Actualitzar els stats al DOM</li>
+          <li>[X] Calcular el dany normal del jugador</li>
+          <li>[X] Calcular el dany crític del jugador (x2)</li>
+          <li>[X] Calcular el dany normal de l'enemic</li>
+          <li>[X] Calcular el dany crític de l'enemic (x2)</li>
+          <li>[X] Calcular la probabilitat de crític (velocitat/5)</li>
+          <li>[X] Calcular la probabilitat d'esquivar (velocitat/6)</li>
+          <li>[X] Calcular els torns necessaris per guanyar (només jugador)</li>
+          <li>[X] Calcular vida restant després del combat (només jugador)</li>
+          <li>[X] Determinar qui ataca primer (qui tingui més velocitat)</li>
+          <li>[X] Calcular la probabilitat de victòria del jugador</li>
+          <li>[X] Activitat grupal SIMULAR UN TORN DE COMBAT</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
