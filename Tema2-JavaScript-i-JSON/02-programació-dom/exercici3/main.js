@@ -48,7 +48,7 @@ let orTotal = 0;
 // ============================================
 // Utilitza Math.random() per generar un número aleatori entre 0 i 100
 
-let numeroAleatori1;
+let numeroAleatori1 = Math.floor(Math.random() * 101);
 
 // ============================================
 // ✅ TASCA 2: Determinar la raresa amb if/else
@@ -65,33 +65,112 @@ let raresa1; //Comú / Poc Comú / Rar / Èpic / Llegendari
 let iconRaresa1; //⚪ / 🟢 / 🔵 / 🟣 / 🟡
 let orGuanyat1; // Random entre 50-100, 100-250, etc segons la raresa
 
+if (numeroAleatori1 >= 0 && numeroAleatori1 < 61) {
+  raresa1 = 'Comú';
+  iconRaresa1 = '⚪';
+  orGuanyat1 = Math.floor(Math.random() * (100 - 50 + 1)) + 50;
+} else if (numeroAleatori1 > 60 && numeroAleatori1 < 95) {
+  raresa1 = 'Poc Comú';
+  iconRaresa1 = '🟢';
+  orGuanyat1 = Math.floor(Math.random() * (250 - 100 + 1)) + 100;
+} else if (numeroAleatori1 > 94 && numeroAleatori1 < 100) {
+  raresa1 = 'Rar';
+  iconRaresa1 = '🔵';
+  orGuanyat1 = Math.floor(Math.random() * (500 - 250 + 1)) + 250;
+} else if ((numeroAleatori1 = 100)) {
+  raresa1 = 'Èpic';
+  iconRaresa1 = '🟣';
+  orGuanyat1 = Math.floor(Math.random() * (1000 - 500 + 1)) + 500;
+}
 // Mostra per consola el número aleatori, la raresa, l'icona i l'or guanyat per comprovar que tot funciona correctament
-// console.log(`Cofre Fusta #1 - Número Aleatori: ${numeroAleatori1}`);
-// console.log(`Cofre Fusta #1 - Raresa: ${raresa1}`);
-// console.log(`Cofre Fusta #1 - Icon: ${iconRaresa1}`);
-// console.log(`Cofre Fusta #1 - Or Guanyat: ${orGuanyat1}`);
+
+console.log(`Cofre Fusta #1 - Número Aleatori: ${numeroAleatori1}`);
+console.log(`Cofre Fusta #1 - Raresa: ${raresa1}`);
+console.log(`Cofre Fusta #1 - Icon: ${iconRaresa1}`);
+console.log(`Cofre Fusta #1 - Or Guanyat: ${orGuanyat1}`);
 
 // ============================================
 // ✅ TASCA 3: Incrementar comptadors
 // ============================================
 // Incrementa el comptador de cofres oberts i el total d'or guanyat
 
+cofresOberts++;
+orTotal += orGuanyat1;
+
+switch (raresa1) {
+  case 'Comú':
+    totalComuns++;
+    break;
+  case 'Poc Comú':
+    totalPocComuns++;
+    break;
+  case 'Rar':
+    totalRars++;
+    break;
+  case 'Èpic':
+    totalEpics++;
+    break;
+  case 'Llegendari':
+    totalLlegendaris++;
+    break;
+}
+
 // ============================================
 // ✅ TASCA 4: Actualitzar DOM
 // ============================================
 // Selecciona els elements (cofres-oberts, comuns, poc-comuns, rars, epics i llegendaris) i actualitza'ls
 
-// const divCofresOberts;
-// const divCofresComuns;
-// const divCofresPocComuns;
-// const divCofresRars;
-// const divCofresEpics;
-// const divCofresLlegendaris;
+const divCofresOberts = document.querySelector('#cofres-oberts');
+const divCofresComuns = document.querySelector('#comuns');
+const divCofresPocComuns = document.querySelector('#poc-comuns');
+const divCofresRars = document.querySelector('#rars');
+const divCofresEpics = document.querySelector('#epics');
+const divCofresLlegendaris = document.querySelector('#llegendaris');
+
+divCofresOberts.textContent = cofresOberts;
+divCofresComuns.textContent = totalComuns;
+divCofresPocComuns.textContent = totalPocComuns;
+divCofresRars.textContent = totalRars;
+divCofresEpics.textContent = totalEpics;
+divCofresLlegendaris.textContent = totalLlegendaris;
 
 // ============================================
 // PART 3: OBRIR MÉS COFRES BÀSICS (DE FUSTA)
 // ============================================
+if (numeroAleatori1 >= 0 && numeroAleatori1 < 61) {
+  raresa1 = 'Comú';
+  iconRaresa1 = '⚪';
+  orGuanyat1 = Math.floor(Math.random() * (100 - 50 + 1)) + 50;
+  totalComuns++;
+} else if (numeroAleatori1 > 60 && numeroAleatori1 < 95) {
+  raresa1 = 'Poc Comú';
+  iconRaresa1 = '🟢';
+  orGuanyat1 = Math.floor(Math.random() * (250 - 100 + 1)) + 100;
+  totalPocComuns++;
+} else if (numeroAleatori1 > 94 && numeroAleatori1 < 100) {
+  raresa1 = 'Rar';
+  iconRaresa1 = '🔵';
+  orGuanyat1 = Math.floor(Math.random() * (500 - 250 + 1)) + 250;
+  totalRars++;
+} else if ((numeroAleatori1 = 100)) {
+  raresa1 = 'Èpic';
+  iconRaresa1 = '🟣';
+  orGuanyat1 = Math.floor(Math.random() * (1000 - 500 + 1)) + 500;
+  totalEpics++;
+}
 
+console.log(`Cofre Fusta #2 - Número Aleatori: ${numeroAleatori1}`);
+console.log(`Cofre Fusta #2 - Raresa: ${raresa1}`);
+console.log(`Cofre Fusta #2 - Icon: ${iconRaresa1}`);
+console.log(`Cofre Fusta #2 - Or Guanyat: ${orGuanyat1}`);
+
+cofresOberts++;
+divCofresOberts.textContent = cofresOberts;
+divCofresComuns.textContent = totalComuns;
+divCofresPocComuns.textContent = totalPocComuns;
+divCofresRars.textContent = totalRars;
+divCofresEpics.textContent = totalEpics;
+divCofresLlegendaris.textContent = totalLlegendaris;
 // ============================================
 // ✅ TASCA 5: Obrir cofre bàsic #2
 // ============================================
@@ -102,6 +181,29 @@ let iconRaresa2;
 let orGuanyat2;
 
 // Determina raresa, la icona, l'or guanyat i incrementa el comptador de raresa amb el mateix sistema que el cofre #1
+
+if (numeroAleatori2 >= 0 && numeroAleatori2 < 61) {
+  raresa2 = 'Comú';
+  iconRaresa2 = '⚪';
+  orGuanyat2 = Math.floor(Math.random() * (100 - 50 + 1)) + 50;
+} else if (numeroAleatori2 > 60 && numeroAleatori2 < 95) {
+  raresa2 = 'Poc Comú';
+  iconRaresa2 = '🟢';
+  orGuanyat2 = Math.floor(Math.random() * (250 - 100 + 1)) + 100;
+} else if (numeroAleatori2 > 94 && numeroAleatori2 < 100) {
+  raresa2 = 'Rar';
+  iconRaresa2 = '🔵';
+  orGuanyat2 = Math.floor(Math.random() * (500 - 250 + 1)) + 250;
+} else if ((numeroAleatori2 = 100)) {
+  raresa2 = 'Èpic';
+  iconRaresa2 = '🟣';
+  orGuanyat2 = Math.floor(Math.random() * (1000 - 500 + 1)) + 500;
+}
+
+console.log(`Cofre Bàsic #1 - Número Aleatori: ${numeroAleatori2}`);
+console.log(`Cofre Bàsic #1 - Raresa: ${raresa2}`);
+console.log(`Cofre Bàsic #1 - Icon: ${iconRaresa2}`);
+console.log(`Cofre Bàsic #1 - Or Guanyat: ${orGuanyat2}`);
 
 // Incrementa el comptador de cofres oberts i el total d'or guanyat
 
